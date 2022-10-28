@@ -4,7 +4,7 @@ import { Order } from './classes/order';
 import { Persistency } from './services/persistency';
 import { Product } from './classes/product';
 import { NoDiscount } from './classes/discount';
-import { IndividualCustomer } from './classes/customer';
+import { EnterpriseCustomer, IndividualCustomer } from './classes/customer';
 
 // const fiftyPercentDiscount = new FiftyPercentDiscount();
 // const tenPercentDiscount = new TenPercentDiscount();
@@ -16,6 +16,10 @@ const individualCustomer = new IndividualCustomer(
   'BRUNO',
   'EDUARDO',
   '111.111.111-11',
+);
+const enterpriseCustomer = new EnterpriseCustomer(
+  'Empresa de bruno',
+  '2222222',
 );
 const order = new Order(
   shopingCart,
