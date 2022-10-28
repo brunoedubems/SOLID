@@ -1,3 +1,4 @@
+1231232;
 type CartItem = { name: string; price: number };
 type OrderStatus = 'open' | 'closed';
 export class ShopingCart {
