@@ -4,6 +4,7 @@ import { Order } from './classes/order';
 import { Persistency } from './services/persistency';
 import { Product } from './classes/product';
 import { NoDiscount } from './classes/discount';
+import { IndividualCustomer } from './classes/customer';
 
 // const fiftyPercentDiscount = new FiftyPercentDiscount();
 // const tenPercentDiscount = new TenPercentDiscount();
@@ -11,7 +12,17 @@ const noDiscount = new NoDiscount();
 const shopingCart = new ShopingCart(noDiscount);
 const messaging = new Messaging();
 const persistency = new Persistency();
-const order = new Order(shopingCart, messaging, persistency);
+const individualCustomer = new IndividualCustomer(
+  'BRUNO',
+  'EDUARDO',
+  '111.111.111-11',
+);
+const order = new Order(
+  shopingCart,
+  messaging,
+  persistency,
+  individualCustomer,
+);
 
 shopingCart.addItem(new Product('camiseta', 49.99));
 shopingCart.addItem(new Product('caderno', 9.99));
